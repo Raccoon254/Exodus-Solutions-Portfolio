@@ -1,0 +1,45 @@
+/* custom-tailwind.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Customize the color palette */
+@tailwind components {
+  /* Add your custom colors here */
+  @layer components {
+    .theme-colors {
+      --primary: #ffc100;
+      --secondary: #ff9a00;
+      --accent: #ff7400;
+      --danger: #ff4d00;
+      --error: #ff0000;
+    }
+  }
+}
+
+/* Use the custom colors in the styles */
+@tailwind utilities {
+  /* Add utility classes that use your custom colors here */
+  @layer utilities {
+    .btn-primary {
+      @apply bg-primary text-white;
+    }
+
+    .btn-secondary {
+      @apply bg-secondary text-white;
+    }
+
+    .btn-accent {
+      @apply bg-accent text-white;
+    }
+
+    .btn-danger {
+      @apply bg-danger text-white;
+    }
+
+    .text-error {
+      @apply text-error;
+    }
+  }
+}
